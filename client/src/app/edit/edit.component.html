@@ -1,0 +1,25 @@
+
+<form [formGroup]="gform" (ngSubmit)="onsubmiitt()">
+    <div class="example-container">
+     <mat-form-field >
+        <mat-label>Enter your Name</mat-label>
+        <input matInput  placeholder="" formControlName="name"  name="name" [(ngModel)]="data.name" #name >
+      </mat-form-field>
+      <mat-form-field>
+          <mat-label>Enter your Age</mat-label>
+        <input matInput  placeholder="" formControlName="age"   [(ngModel)]="data.age"  #age name="age">
+      </mat-form-field>
+      <mat-form-field>
+          <mat-label>Enter About You</mat-label>
+        <input matInput  placeholder="" formControlName="about"  [(ngModel)]="data.about" #about name="about">
+      </mat-form-field>
+      
+ <!--     <input type="hidden"  placeholder="" formControlName="id" [(ngModel)]= "data.id"  name="id">-->
+   <a RouterLink="/edit:id">
+    <button type="submit" mat-raised-buttons>Save!!</button></a>  
+    </div>
+</form>
+
+
+
+
